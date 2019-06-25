@@ -6,12 +6,12 @@
  - Language : java
  - Format : title(solutionNum)_Category
  - Package classification
-   - Greed
-   - Sort
-   - Search
-   - String
    - DP
-   - previous (Format : title(company)_Category)
+   - Greedy
+   - Search
+   - Sort
+   - String
+   - Previous (Format : title(company)_Category)
    - References (Copy from previous Algorithm repository.)
  - ReadMe.md
  - try to use Branch and Pull request.
