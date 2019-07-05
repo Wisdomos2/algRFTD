@@ -1,4 +1,4 @@
-package test;
+package X.Prgmers;
 
 import java.util.Scanner;
 
