@@ -8,14 +8,7 @@ import java.util.Queue;
 
 
 /*
- * 다시 생각해 볼 것 . 
- * Q에 집어넣는 순서가 얽히는 것 같음
- * 전체 중에 익은걸 넣고 다시 첨으로 돌아와서 집어넣는 순으로 가야함.
- * Day++를 언제 칠 건지. 넣는게 중요. 
- * 애초에 1(익은토마토를 탐색할때) 큐에 넣는다. 큐는 전역변수로 설정한다.
- * 그 다음 최초로 다 넣었던 큐에서 하나를 꺼낸 뒤 주변탐색하고 그 포인트를 넣는다.
- * 그럼Day를 언제 추가하지?라고한다면 첫날엔 1을, 2일째는 2를 다른 배열에 넣어서 최대값출력?
- * 너무 비효율적인것같기도하고..
+
  */
 public class Tomato7569_Boj  {
 	static BufferedReader bf = null;
@@ -66,10 +59,14 @@ public class Tomato7569_Boj  {
 			return;
 		}
 		
-		int day = 0;
+		/*
+		 * day에 -1을 둔이유, 하루가 안지나도 오늘에 끝날수 있기때문.
+		 */
+		int day = -1;
 		while(!q.isEmpty()) {
+			int qsize = q.size();
 			day++;
-			for(int cycle=0;cycle<q.size();cycle++) {
+			for(int cycle=0;cycle<qsize;cycle++) {
 				location x = q.poll();
 				int nowh = x.height;
 				int nowc = x.col;
@@ -119,6 +116,15 @@ public class Tomato7569_Boj  {
 		
 	}
 	
+	static void printarr(int Arr[][][]) {
+		for(int h=0;h<H;h++) {
+			for(int n=0;n<N;n++) {
+				for(int m=0;m<M;m++) {
+					System.out.println();
+				}
+			}
+		}
+	}
 	
 	
 	static class location {
