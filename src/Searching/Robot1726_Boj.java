@@ -1,92 +1,85 @@
 package Searching;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
+/*
+    왜 visited가 3차원인지 손으로 직접 그려보기.
+    머리로도 대충 알 것 같기도?
+    ----> 3번갔는데 막혔으면 <---갈수도 있어야함. 방향을 따로 체크하지않으면 돌아올수가 없음.
+    문제가 병신인지 내눈이 병신인지 모르겠네
+    3이 없어지는것은 그 뭐냐 행과 열 차이인거같은데 씨이파아아아앙새
+ */
 public class Robot1726_Boj {
-    static int col;
-    static int row;
-    static int start_col;
-    static int start_row;
-    static int end_col;
-    static int end_row;
-    static int start_direction;
-    static int end_direction;
+    static int M;
+    static int N;
     static int map[][];
     static boolean visited[][][];
-    public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String cr[] = bf.readLine().split(" ");
+    static int st_col;
+    static int st_row;
+    static int st_way;
+    static int en_col;
+    static int en_row;
+    static int en_way;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        col = Integer.parseInt(cr[0]);
-        row = Integer.parseInt(cr[1]);
+        M = sc.nextInt();
+        N = sc.nextInt();
 
-        map = new int[col][row];
-        visited = new boolean[5][col][row];
+        map = new int[M+1][N+1];
+        visited = new boolean[5][M+1][N+1];
 
-        for(int i=0;i<col;i++) {
-            String temp[] = bf.readLine().split(" ");
-            for(int j=0;j<row;j++) {
-                map[i][j] = Integer.parseInt(temp[j]);
+        for(int i=1;i<=M;i++) {
+            for(int j=1;j<=N;j++) {
+                map[i][j] = sc.nextInt();
             }
         }
 
-        String startinfo[] = bf.readLine().split(" ");
-        String endinfo[] = bf.readLine().split(" " );
+        st_col = sc.nextInt();
+        st_row = sc.nextInt();
+        st_way = sc.nextInt();
 
-        start_col = Integer.parseInt(startinfo[0]);
-        start_row = Integer.parseInt(startinfo[1]);
-        start_direction = Integer.parseInt(startinfo[2]);
+        en_col= sc.nextInt();
+        en_row = sc.nextInt();
+        en_way = sc.nextInt();
 
-        end_col = Integer.parseInt(endinfo[0]);
-        end_row = Integer.parseInt(endinfo[1]);
-        end_direction = Integer.parseInt(endinfo[2]);
+        visited[st_way][st_col][st_row] = true;
+        Search();
 
-
-        moving(start_col, start_row, start_direction);
-
-        bf.close();
+        sc.close();
         return;
 
     }
 
-    private static void moving(int in_col, int in_row, int in_direction) {
-        Queue<info> q = new LinkedList<info>();
-        //방향은 동쪽이 1, 서쪽이 2, 남쪽이 3, 북쪽이 4
-        int dc[] = {0,0,1,-1};
-        int dr[] = {1,-1,0,0};
-
-
-        //visited[in_direction][in_col][in_row] = true;
-        q.add(new info(in_col,in_row,in_direction,0));
-        visited[in_direction][in_col][in_row] = true;
+    public static void Search() {
+        /* 동쪽이 1, 서쪽이 2, 남쪽이 3, 북쪽이 4 */
+        Queue<Info> q = new LinkedList<>();
+        int dc[] = {0,0,0,-1,1};
+        int dr[] = {0,1,-1,0,0};
+        q.add(new Info(st_col, st_row, st_way, 0));
 
         while(!q.isEmpty()) {
-            int nowc = q.peek().col;
-            int nowr = q.peek().row;
-            int nowd = q.peek().direction;
-            int nowcount = q.poll().count;
-            if(nowc == end_col && nowr == end_row && nowd == end_direction) {
-                System.out.println(nowcount);
-                break;
+            Info getq = q.poll();
+            int nowcol = getq.col;
+            int nowrow = getq.row;
+            int nowway = getq.way;
+            int nowcnt = getq.cnt;
+            if(nowrow== en_row && nowcol == en_col && nowway== en_way) {
+                System.out.println(nowcnt);
+                return;
             }
 
-            /*
-            현재 기준으로 2개의 반복.
-            1) Go K.
-            2) Turn left 90, right 90.
-             */
 
-            for(int k=1; k<=3; k++) {
-                int nextc = nowc + (dc[nowd-1] * k);
-                int nextr = nowr + (dr[nowd-1] * k);
-                if(nextc > -1 && nextc < col && nextr > -1 && nextr < row) {
-                    if(!visited[nowd][nextc][nextr] && map[nextc][nextr] == 0) {
-                        q.add(new info(nextc,nextr, nowd, nowcount+1));
-                        visited[nowd][nextc][nextr] = true;
+            // Go K
+            for(int i=1;i<=3;i++) {
+                int nextcol = nowcol + (dc[nowway] * i);
+                int nextrow = nowrow + (dr[nowway] * i);
+                if(nextcol > 0 && nextcol <= M && nextrow > 0 && nextrow <= N) {
+                    if(map[nextcol][nextrow] == 0 && visited[nowway][nextcol][nextrow] == false) {
+                        visited[nowway][nextcol][nextrow] = true;
+                        q.add(new Info(nextcol, nextrow, nowway, nowcnt + 1));
                     }
                 }
                 else {
@@ -94,38 +87,51 @@ public class Robot1726_Boj {
                 }
             }
 
-            for (int i = 1; i <= 4; i++) {
-                if (nowd != i && !visited[i][nowc][nowr]) {
-                    int add = 1;
-                    if (nowd == 1) {
-                        if (i == 2) ++add;
-                    } else if (nowd == 2) {
-                        if (i == 1) ++add;
-                    } else if (nowd == 3) {
-                        if (i == 4) ++add;
-                    } else {
-                        if (i == 3) ++add;
+            // Turn dir
+            for(int i=1;i<=4;i++) {
+                int add = 1;
+                if(nowway != i && visited[i][nowcol][nowrow] == false) {
+                    if(nowway == 1) {
+                        if(i == 2) {
+                            add++;
+                        }
                     }
-                    visited[i][nowc][nowr] = true;
-                    q.add(new info(nowc, nowr, i, nowcount + add));
+                    else if(nowway == 2) {
+                        if(i == 1) {
+                            add++;
+                        }
+                    }
+                    else if(nowway == 3) {
+                        if(i == 4) {
+                            add++;
+                        }
+                    }
+                    else if(nowway == 4) {
+                        if(i == 3) {
+                            add++;
+                        }
+                    }
                 }
+                visited[i][nowcol][nowrow] = true;
+                q.add(new Info(nowcol, nowrow, i, nowcnt + add));
             }
+
 
         }
 
-        return;
     }
 
-    private static class info {
+    public static class Info {
         int col;
         int row;
-        int direction;
-        int count;
-        public info (int col, int row, int direction, int count) {
+        int way;
+        int cnt;
+
+        public Info (int col, int row, int way, int cnt) {
             this.col = col;
             this.row = row;
-            this.direction = direction;
-            this.count = count;
+            this.way = way;
+            this.cnt = cnt;
         }
     }
 }

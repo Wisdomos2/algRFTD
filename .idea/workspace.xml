@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991ec76e-f825-49ba-87fa-3244e89eae65" name="Default Changelist" comment="" />
+    <list default="true" id="991ec76e-f825-49ba-87fa-3244e89eae65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Searching/Robot1726_Boj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searching/Robot1726_Boj.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kakao2019/openTalk.java">
+        <entry file="file://$PROJECT_DIR$/src/Searching/BrokeWall2206_Boj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="66">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,31 +31,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kakao2019/failPercent.java">
+        <entry file="file://$PROJECT_DIR$/src/Implement/LessThanX10871_Boj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kakao2019/parentheses_rebuilding.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="594">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="e#1158#1169#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kakao2019/num3.java">
+        <entry file="file://$PROJECT_DIR$/src/Implement/SugarDelivery2839_Boj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="418">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Implement/Olympic8979_Boj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Searching/Robot1726_Boj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-843">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,14 +76,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Kakao2019/num5.java">
+        <entry file="file://$PROJECT_DIR$/src/Implement/MoneyHunter15953_Boj.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#649#665#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="335">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -99,6 +110,14 @@
         <option value="$PROJECT_DIR$/src/Kakao2019/parentheses_rebuilding.java" />
         <option value="$PROJECT_DIR$/src/Kakao2019/num3.java" />
         <option value="$PROJECT_DIR$/src/Kakao2019/num5.java" />
+        <option value="$PROJECT_DIR$/src/Searching/BrokeWall2206_Boj.java" />
+        <option value="$PROJECT_DIR$/src/Implement/LessThanX10871_Boj.java" />
+        <option value="$PROJECT_DIR$/src/Implement/SugarDelivery2839_Boj.java" />
+        <option value="$PROJECT_DIR$/src/Implement/Olympic8979_Boj.java" />
+        <option value="$PROJECT_DIR$/src/Searching/temp.java" />
+        <option value="$PROJECT_DIR$/src/Searching/Robot_retry.java" />
+        <option value="$PROJECT_DIR$/src/Searching/Robot1726_Boj.java" />
+        <option value="$PROJECT_DIR$/src/Implement/MoneyHunter15953_Boj.java" />
       </list>
     </option>
   </component>
@@ -142,7 +161,13 @@
               <item name="algRFTD" type="b2602c69:ProjectViewProjectNode" />
               <item name="algRFTD" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Kakao2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Implement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algRFTD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algRFTD" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Searching" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -151,6 +176,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -169,13 +195,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.num5">
-    <configuration name="failPercent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kakao2019.failPercent" />
+  <component name="RunManager" selected="Application.MoneyHunter15953_Boj">
+    <configuration name="MoneyHunter15953_Boj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Implement.MoneyHunter15953_Boj" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kakao2019.*" />
+          <option name="PATTERN" value="Implement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,12 +209,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="num3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kakao2019.num3" />
+    <configuration name="Olympic8979_Boj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Implement.Olympic8979_Boj" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kakao2019.*" />
+          <option name="PATTERN" value="Implement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -196,12 +222,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="num5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kakao2019.num5" />
+    <configuration name="Robot1726_Boj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Searching.Robot1726_Boj" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kakao2019.*" />
+          <option name="PATTERN" value="Searching.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,12 +235,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openTalk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kakao2019.openTalk" />
+    <configuration name="Robot_retry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Searching.Robot_retry" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kakao2019.*" />
+          <option name="PATTERN" value="Searching.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -222,12 +248,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="parentheses_rebuilding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kakao2019.parentheses_rebuilding" />
+    <configuration name="SugarDelivery2839_Boj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Implement.SugarDelivery2839_Boj" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Kakao2019.*" />
+          <option name="PATTERN" value="Implement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -237,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.num5" />
-        <item itemvalue="Application.num3" />
-        <item itemvalue="Application.parentheses_rebuilding" />
-        <item itemvalue="Application.failPercent" />
-        <item itemvalue="Application.openTalk" />
+        <item itemvalue="Application.MoneyHunter15953_Boj" />
+        <item itemvalue="Application.Robot_retry" />
+        <item itemvalue="Application.Robot1726_Boj" />
+        <item itemvalue="Application.Olympic8979_Boj" />
+        <item itemvalue="Application.SugarDelivery2839_Boj" />
       </list>
     </recent_temporary>
   </component>
@@ -257,17 +283,22 @@
       <updated>1567751183918</updated>
       <workItem from="1567751190518" duration="4895000" />
       <workItem from="1567830779506" duration="12648000" />
+      <workItem from="1568103198570" duration="3588000" />
+      <workItem from="1568193804134" duration="3049000" />
+      <workItem from="1568287527444" duration="12638000" />
+      <workItem from="1568608733579" duration="465000" />
+      <workItem from="1568702297201" duration="7616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17543000" />
+    <option name="totallyTimeSpent" value="44899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16237482" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17310444" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -276,7 +307,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,10 +333,23 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Kakao2019/failPercent.java">
+    <entry file="file://$PROJECT_DIR$/src/Kakao2019/num5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state relative-caret-position="132">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kakao2019/num3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -319,19 +363,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kakao2019/num3.java">
+    <entry file="file://$PROJECT_DIR$/src/Kakao2019/failPercent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="191">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kakao2019/openTalk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
+        <state relative-caret-position="22">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -339,14 +380,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kakao2019/num5.java">
+    <entry file="file://$PROJECT_DIR$/src/Searching/BrokeWall2206_Boj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="66">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#649#665#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implement/LessThanX10871_Boj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implement/SugarDelivery2839_Boj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implement/Olympic8979_Boj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searching/temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searching/Robot_retry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="58" column="51" lean-forward="true" selection-end-line="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searching/Robot1726_Boj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-843">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implement/MoneyHunter15953_Boj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
         </state>
       </provider>
     </entry>
