@@ -18,7 +18,9 @@ public class KaKaoColoringBook_Pgrs {
         Maxcol = m;
         Maxrow = n;
         int answer[] = solution(m,n,arr);
-        System.out.println(answer[0]  + " " + answer[1]);
+        for(int i : answer) {
+            System.out.println(i);
+        }
         return;
 
     }
