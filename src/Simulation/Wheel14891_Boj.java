@@ -33,7 +33,7 @@ public class Wheel14891_Boj {
         }
 
         int sum = 0;
-        for(int i=1;i<4;i++) {
+        for(int i=1;i<=4;i++) {
             if(wheels[i][0] == 0) {
                 continue;
             }
@@ -55,8 +55,8 @@ public class Wheel14891_Boj {
         같으면 작업하지 않고 끝, 다르면 방향바꿔서 working turn 다시 실행.
      */
     public static void workingturn(int wheelNum, int direction) {
-        int nowLeft = wheels[wheelNum][2];
-        int nowRight = wheels[wheelNum][6];
+        int nowLeft = wheels[wheelNum][6];
+        int nowRight = wheels[wheelNum][2];
         int nextdirection = 0;
 
         shiftWheel(wheelNum,direction);
@@ -69,11 +69,11 @@ public class Wheel14891_Boj {
         }
 
         //왼쪽
-        if(wheelNum-1 > 0 && nowLeft != wheels[wheelNum-1][6]) {
+        if(wheelNum-1 > 0 && nowLeft != wheels[wheelNum-1][2]) {
             workingturn(wheelNum-1, nextdirection);
         }
         //오른쪽
-        if(wheelNum+1 < 5 && nowRight != wheels[wheelNum+1][2]) {
+        if(wheelNum+1 < 5 && nowRight != wheels[wheelNum+1][6]) {
             workingturn(wheelNum+1,nextdirection);
         }
         return;
