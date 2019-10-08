@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class Wheel14891_Boj {
     static int wheels[][] = new int[5][8];
+    static boolean visited[] = null;
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
@@ -28,6 +29,8 @@ public class Wheel14891_Boj {
             int wheelNum = Integer.parseInt(temp2[0]);
             int direction = Integer.parseInt(temp2[1]);
 
+
+            visited = new boolean[5];
             workingturn(wheelNum,direction);
 
         }
@@ -38,7 +41,8 @@ public class Wheel14891_Boj {
                 continue;
             }
             else {
-                sum += (int)Math.pow(2,i-1);
+                int add = (int)Math.pow(2,i-1);
+                sum += add;
             }
         }
         System.out.println(sum);
@@ -59,6 +63,8 @@ public class Wheel14891_Boj {
         int nowRight = wheels[wheelNum][2];
         int nextdirection = 0;
 
+
+        visited[wheelNum] = true;
         shiftWheel(wheelNum,direction);
 
         //다음 바퀴는 반향이 정반대
@@ -68,12 +74,14 @@ public class Wheel14891_Boj {
             nextdirection = 1;
         }
 
+        //갔다가 또올 가능성이 있다. 이걸 배제시켜주어야한다.
+
         //왼쪽
-        if(wheelNum-1 > 0 && nowLeft != wheels[wheelNum-1][2]) {
+        if(wheelNum-1 > 0 && nowLeft != wheels[wheelNum-1][2] && visited[wheelNum-1] == false) {
             workingturn(wheelNum-1, nextdirection);
         }
         //오른쪽
-        if(wheelNum+1 < 5 && nowRight != wheels[wheelNum+1][6]) {
+        if(wheelNum+1 < 5 && nowRight != wheels[wheelNum+1][6] && visited[wheelNum+1] == false) {
             workingturn(wheelNum+1,nextdirection);
         }
         return;
@@ -83,7 +91,7 @@ public class Wheel14891_Boj {
         // 시계 방향 >>>
         if(direction == 1) {
             int last = wheels[wheelNum][7];
-            for(int i=1;i<8;i++) {
+            for(int i=7;i>0;i--) {
                 wheels[wheelNum][i] = wheels[wheelNum][i-1];
             }
             wheels[wheelNum][0] = last;
@@ -91,11 +99,13 @@ public class Wheel14891_Boj {
         // 반시계방향 <<<
         else if(direction == -1) {
             int first = wheels[wheelNum][0];
-            for(int i=7;i>0;i--) {
+            for(int i=1;i<8;i++) {
                 wheels[wheelNum][i-1] = wheels[wheelNum][i];
             }
             wheels[wheelNum][7] = first;
         }
+
         return;
+
     }
 }
