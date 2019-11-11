@@ -1,2 +1,13 @@
 /bin/
-/.idea/workspace.xml
+
+*.xml
+*.class
+algRFTD.iml
+
+.project
+.metadata
+.classpath
+.settings/
+.loadpath
+
+/.idea/

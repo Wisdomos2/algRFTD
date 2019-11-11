@@ -15,3 +15,8 @@
    - References (Copy from previous Algorithm repository.)
  - ReadMe.md
  - try to use Branch and Pull request.
+
+
+### ignore 파일 안먹을 때 . 
+ - [ git rm -r --cached . ]
+ - [ git add . ]
