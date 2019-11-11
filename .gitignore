@@ -1,11 +1,13 @@
 /bin/
-/.idea/
 
 *.xml
 *.class
-*.iml
+algRFTD.iml
+
 .project
 .metadata
 .classpath
 .settings/
 .loadpath
+
+/.idea/
