@@ -1,2 +1,11 @@
 /bin/
-/.idea/workspace.xml
+/.idea/
+
+*.xml
+*.class
+*.iml
+.project
+.metadata
+.classpath
+.settings/
+.loadpath
