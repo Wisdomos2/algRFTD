@@ -12,6 +12,7 @@ public class Budget_Prg {
         return;
     }
 
+
     /* 효율성 2번 -> 모든배열에서 sum하는 부분 Overflow 발생, int -> long으로 바꿔줌.
     * */
     public static int solution(int[] budgets, int M) {
@@ -30,6 +31,7 @@ public class Budget_Prg {
 
         // min , max
         min = (int)Math.floor(M / budgets.length);
+
         max = budgets[budgets.length-1];
         // 1. 조건, 처음에는 합산값을 return 해야하는 줄알아서 통과 못했었음. 최대값 넘겨주면 됨.
         if(sum <= M) {
