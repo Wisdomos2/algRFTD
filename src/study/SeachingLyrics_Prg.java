@@ -36,10 +36,10 @@ public class SeachingLyrics_Prg {
     public static int[] solution(String[] words, String[] queries) {
         int[] answer = new int[queries.length];
 
-        //root , 비어있는 상태로 생성.
+        // '?'가 접미인 경우
         Trie trie = new Trie();
 
-        // '?'가 접두로 붙은 경우 reverse해서 검색하기 위함.
+        // '?'가 접두인 인경우 -> reverse
         Trie trie_reverse = new Trie();
 
         //trie 객체에 word 집어넣음.
