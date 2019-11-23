@@ -9,7 +9,14 @@ public class Trie_Lyric_Prg {
         String input1[] = {"frodo", "front", "frost", "frozen", "frame", "kakao"};
         String input2[] = {"fro??", "????o", "fr???", "fro???", "pro?"};
 
+
         for(int i : solution(input1,input2)) {
+            System.out.printf(i + " ");
+        }
+
+        String input12[] = {"frozen"};
+        String nput22[] = {"??oz??"};
+        for(int i : solution(input12,nput22)) {
             System.out.printf(i + " ");
         }
     }
