@@ -39,7 +39,7 @@ public class Prgtester {
             }
         }
 
-        return;
+        //return;
     }
     /*
     정확성  테스트
