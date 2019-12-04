@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd0daca3-e71d-4121-b9e5-c6ec2891d332" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/study/LockNKey_Prg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/study/LockNKey_Prg.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +21,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
   <component name="ProjectId" id="1TNQnTotBKCxf8O7GtmwO4afisD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -32,7 +29,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EventAPI" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,9 +44,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NARA124_Prg">
-    <configuration name="NARA124_Prg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.NARA124_Prg" />
+  <component name="RunManager" selected="Application.LockNKey_Prg">
+    <configuration name="BestAllbum_Prg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.BestAllbum_Prg" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
@@ -60,12 +58,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NQueen9663_Boj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Searching.NQueen9663_Boj" />
+    <configuration name="LockNKey_Prg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.LockNKey_Prg" />
       <module name="algRFTD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Searching.*" />
+          <option name="PATTERN" value="study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prgtester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.Prgtester" />
+      <module name="algRFTD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Triangle_Prg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.Triangle_Prg" />
+      <module name="algRFTD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.test" />
+      <module name="algRFTD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,8 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NARA124_Prg" />
-        <item itemvalue="Application.NQueen9663_Boj" />
+        <item itemvalue="Application.LockNKey_Prg" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.BestAllbum_Prg" />
+        <item itemvalue="Application.Prgtester" />
+        <item itemvalue="Application.Triangle_Prg" />
       </list>
     </recent_temporary>
   </component>
