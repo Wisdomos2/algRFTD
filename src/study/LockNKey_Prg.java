@@ -1,45 +1,15 @@
 package study;
 /*
     https://programmers.co.kr/learn/courses/30/lessons/60059
-    https://dundung.tistory.com/138 참고
  */
 public class LockNKey_Prg {
+    static boolean result = false;
     public static void main(String[] args) {
         int inputkey[][] = {{0, 0, 0}, {1, 0, 0}, {0, 1, 1}};
         int inputlock[][] = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
 
-        test(inputkey,inputlock);
         System.out.println(solution(inputkey,inputlock));
 
-    }
-
-    public static void test(int[][] key, int[][] lock) {
-        int keyMapSize = key.length;
-        int lockMapSize = lock.length;
-        int resultMapSize = lockMapSize*3;
-
-        int resultMap[][] = new int[resultMapSize][resultMapSize];
-
-        for(int i=lockMapSize;i<lockMapSize*2;i++) {
-            for(int j=lockMapSize;j<lockMapSize*2;j++) {
-                resultMap[i][j] = lock[i-lockMapSize][j-lockMapSize];
-            }
-        }
-
-        for (int i = 0; i < resultMapSize; i++) {
-            for (int j = 0; j < resultMapSize; j++) {
-                System.out.printf(resultMap[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println("-----------");
-        addNCheck(resultMap,key,lockMapSize,0,0);
-
-
-
-
-        return;
     }
 
     /*
@@ -51,93 +21,87 @@ public class LockNKey_Prg {
             2-2. 모두 1이라면 리턴한다.
      */
     public static boolean solution(int[][] key, int[][] lock) {
-        int keyMapSize = key.length;
-        int lockMapSize = lock.length;
-        int resultMapSize = lockMapSize*3;
+        int resultMap[][] = new int[lock.length*3][lock.length*3];
 
-        int resultMap[][] = new int[resultMapSize][resultMapSize];
-
-        for(int i=lockMapSize;i<lockMapSize*2;i++) {
-            for(int j=lockMapSize;j<lockMapSize*2;j++) {
-                resultMap[i][j] = lock[i-lockMapSize][j-lockMapSize];
+        for(int i=0;i<lock.length;i++) {
+            for(int j=0;j<lock.length;j++) {
+                resultMap[i+lock.length][j+lock.length] = lock[i][j];
             }
         }
-
-        // resultMap print
-//        for(int i=0;i<resultMapSize;i++) {
-//            for(int j=0;j<resultMapSize;j++) {
-//                System.out.printf(resultMap[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-
-        return func1(resultMap,key,lockMapSize,0,0);
+        func1(resultMap,key,0);
+        return result;
     }
 
     // key + resultMap (value)
     // startcol,startrow : key index 이걸 반복문 시작인자로 넣고 ~ keylength+col/row 까지 반복
-    // 안되는 이유  : resultMap 이 재탕되는 거같음 .
-    public static boolean func1(int resultMap[][], int key[][], int checkindex ,int startcol, int startrow) {
-        int dc[] = {0,1};
-        int dr[] = {1,0};
-        int tempMap[][] = resultMap;
-        int nextcol = 0;
-        int nextrow = 0;
-
-        for(int i=0;i<4;i++) {
-            if(i==3) {
-                key = rotaion(key, key.length);
-                tempMap = resultMap;
-                continue;
-            }
-            else {
-                if(addNCheck(tempMap,key,checkindex,startcol,startrow)) {
-                    return true;
-                }
-                else {
-                    key = rotaion(key, key.length);
-                    tempMap = resultMap;
-                }
-            }
+    public static void func1(int resultMap[][], int key[][], int count) {
+        addNCheck(resultMap,key,0,0);
+        if(result) {
+            return;
         }
-
-        for(int i=0;i<2;i++) {
-            nextcol = startcol + dc[i];
-            nextrow = startrow + dr[i];
-            if(nextcol <= (tempMap.length-checkindex) && nextrow <= (tempMap.length-checkindex)) {
-                return func1(tempMap,key,checkindex,nextcol,nextrow);
-            }
+        if(count >= 4) {
+            return;
         }
-        return false;
+        int ratatedKey[][] = rotaion(key);
+        func1(resultMap,ratatedKey,count+1);
+        return;
     }
     // check values range of lockSizeMap in resultMap :
     // 검수 완료
-    public static boolean addNCheck(int resultMap[][], int key[][], int checkindex ,int startcol, int startrow)  {
-        int resultMapSize = resultMap.length;
+    public static void addNCheck(int resultMap[][], int key[][],int startcol, int startrow)  {
+        if(result) {
+            return;
+        }
+        if(startrow+key.length > resultMap.length) {
+            startrow = 0;
+            startcol++;
+        }
+        if(startcol+key.length > resultMap.length) {
+            return;
+        }
 
-        //add
+        int tempMap[][] = new int[resultMap.length][resultMap.length];
+
+        //copy lock arr
+        for(int i=0;i<resultMap.length;i++) {
+            for(int j=0;j<resultMap.length;j++) {
+                tempMap[i][j] = resultMap[i][j];
+            }
+        }
+
+        boolean notMatchflag = false;
+        loop:
         for(int i=0;i<key.length;i++) {
             for(int j=0;j<key.length;j++) {
-                if(i+startcol < resultMapSize && j+startrow < resultMapSize) {
-                    resultMap[i+startcol][j+startrow] += key[i][j];
+                if(key[i][j] == 1) {
+                    if(tempMap[i+startcol][j+startrow] == 1) {
+                        notMatchflag = true;
+                        break loop;
+                    }
+                    tempMap[i+startcol][j+startrow] = key[i][j];
                 }
             }
         }
-
-        //check , range : checkindex ~ <checkindex*2
-        for(int i=checkindex;i<checkindex*2;i++) {
-            for(int j=checkindex;j<checkindex*2;j++) {
-                if(resultMap[i][j] != 1) {
-                    return false;
+        if(!notMatchflag) {
+            loop:
+            for(int i=0;i<resultMap.length/3;i++) {
+                for(int j=0;j<resultMap.length/3;j++) {
+                    if(tempMap[i+resultMap.length/3][j+resultMap.length/3] != 1) {
+                        notMatchflag = true;
+                        break loop;
+                    }
                 }
             }
         }
-
-        return true;
+        if(!notMatchflag) {
+            result = true;
+        }
+        addNCheck(resultMap,key,startcol,startrow+1);
     }
 
     // 검수 완료
-    public static int[][] rotaion(int map[][], int N) {
+    public static int[][] rotaion(int map[][]) {
+        int N = map.length;
         int tempMap[][] = new int[N][N];
         for (int col=0;col<N;col++) {
             for (int row=0;row<N; row++) {
@@ -146,5 +110,17 @@ public class LockNKey_Prg {
         }
 
         return tempMap;
+    }
+
+    //print arr
+    public static void printarr(int map[][]) {
+        int mapsize = map.length;
+        for(int i=0;i<mapsize;i++) {
+            for(int j=0;j<mapsize;j++) {
+                System.out.printf(map[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------");
     }
 }
