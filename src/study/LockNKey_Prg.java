@@ -80,33 +80,39 @@ public class LockNKey_Prg {
     public static boolean func1(int resultMap[][], int key[][], int checkindex ,int startcol, int startrow) {
         int dc[] = {0,1};
         int dr[] = {1,0};
+        int tempMap[][] = resultMap;
         int nextcol = 0;
         int nextrow = 0;
 
         for(int i=0;i<4;i++) {
             if(i==3) {
                 key = rotaion(key, key.length);
+                tempMap = resultMap;
                 continue;
             }
             else {
-                if(addNCheck(resultMap,key,checkindex,startcol,startrow)) {
+                if(addNCheck(tempMap,key,checkindex,startcol,startrow)) {
                     return true;
                 }
-                key = rotaion(key, key.length);
+                else {
+                    key = rotaion(key, key.length);
+                    tempMap = resultMap;
+                }
             }
         }
 
         for(int i=0;i<2;i++) {
             nextcol = startcol + dc[i];
             nextrow = startrow + dr[i];
-            if(nextcol <= (resultMap.length-checkindex) && nextrow <= (resultMap.length-checkindex)) {
-                return func1(resultMap,key,checkindex,nextcol,nextrow);
+            if(nextcol <= (tempMap.length-checkindex) && nextrow <= (tempMap.length-checkindex)) {
+                return func1(tempMap,key,checkindex,nextcol,nextrow);
             }
         }
         return false;
     }
-    // check values range of lockSizeMap in resultMap : ok
-    public static boolean addNCheck(int resultMap[][], int key[][], int checkindex ,int startcol, int startrow) {
+    // check values range of lockSizeMap in resultMap :
+    // 검수 완료
+    public static boolean addNCheck(int resultMap[][], int key[][], int checkindex ,int startcol, int startrow)  {
         int resultMapSize = resultMap.length;
 
         //add
@@ -117,6 +123,7 @@ public class LockNKey_Prg {
                 }
             }
         }
+
         //check , range : checkindex ~ <checkindex*2
         for(int i=checkindex;i<checkindex*2;i++) {
             for(int j=checkindex;j<checkindex*2;j++) {
@@ -129,7 +136,7 @@ public class LockNKey_Prg {
         return true;
     }
 
-
+    // 검수 완료
     public static int[][] rotaion(int map[][], int N) {
         int tempMap[][] = new int[N][N];
         for (int col=0;col<N;col++) {
@@ -137,6 +144,7 @@ public class LockNKey_Prg {
                 tempMap[col][row] = map[N-row-1][col];
             }
         }
+
         return tempMap;
     }
 }
