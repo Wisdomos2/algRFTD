@@ -2,7 +2,13 @@ package study;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println(testfucn(0));
+
+        System.out.println((1 >>> 4));
+
+        for(int i=1;i<(1<<4);i++) {
+            System.out.println(i);
+        }
+
     }
 
     public static int testfucn(int i) {
