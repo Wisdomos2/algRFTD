@@ -6,7 +6,6 @@ public class TravelRoute_Prg {
     public static void main(String[] args) {
         String tikets[][] = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
         String tikets2[][] = {{"ICN","SFO"},{"ICN","ATL"},{"SFO","ATL"},{"ATL","ICN"},{"ATL","SFO"}};
-
 //        String result1[] = solution(tikets);
 //        String return1[] = {"ICN","JFK","HND","IAD"};
 //        for(String i :  result1) {
