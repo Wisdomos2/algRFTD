@@ -3,13 +3,7 @@ package study;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-/*
-    참고 https://marobiana.tistory.com/81?category=422167
-    https://marobiana.tistory.com/83?category=422167
-    x좌표 위주로 정렬을 다시해주거나
-    소스가 꼬였거나. Node로 input을 바꿔주는 과정에서.
-    문제 정확하게 다시 읽기 
- */
+
 public class FindPathGame_Prg_BTS {
     public static void main(String[] args) {
         int input[][] = {{5,3},{11,5},{13,3},{3,5},{6,1},{1,3},{8,6},{7,2},{2,2}};
@@ -17,15 +11,16 @@ public class FindPathGame_Prg_BTS {
 
         int compare[][] = {{7,4,6,9,1,8,5,2,3},{9,6,5,8,1,4,3,2,7}};
 
-        //test
-//        for(int i=0;i<2;i++) {
-//            for(int j=0;j<compare[0].length;j++) {
-//                if(compare[i][j] != result[i][j]) {
-//                    System.out.println("false");
-//                    return;
-//                }
-//            }
-//        }
+        for(int i=0;i<2;i++) {
+            for(int j=0;j<compare[0].length;j++) {
+                if(compare[i][j] != result[i][j]) {
+                    System.out.println("false");
+                    return;
+                }
+                System.out.printf(result[i][j] + " ");
+            }
+            System.out.println();
+        }
         System.out.println("true");
         return;
 
@@ -38,7 +33,7 @@ public class FindPathGame_Prg_BTS {
         post/pre를 구현하면된다.
      */
     public static int[][] solution(int[][] nodeinfo) {
-        int[][] answer = {};
+        int[][] answer = null;
 
         ArrayList<Node> list = new ArrayList<>();
 
@@ -47,84 +42,79 @@ public class FindPathGame_Prg_BTS {
             list.add(new Node(i+1,nodeinfo[i][0],nodeinfo[i][1]));
         }
 
-        // y좌표 순으로 정렬
+        // y좌표 순으로 정렬 y가 같으면 x순으로 정렬.
         Comparator<Node> nodeComparator = new Comparator<Node>() {
             @Override
             public int compare(Node o1, Node o2) {
-                return o2.col - o1.col;
+                if(o1.col == o2.col) {
+                    return o1.row - o2.row;
+                }
+                else {
+                    return o2.col - o1.col;
+                }
             }
         };
         Collections.sort(list, nodeComparator);
 
-        Tree tree = new Tree();
         for(int i=0;i<list.size();i++) {
-            tree.addNode(list.get(i));
+            System.out.println(list.get(i).col + " " + list.get(i).row + " " + list.get(i).value);
         }
+        System.out.println();
 
-        tree.preorder(tree.root);
-        System.out.println("----");
-        tree.postorder(tree.root);
+
+        Node root  = list.get(0);
+        for(int i=1;i<list.size();i++) {
+            addNode(list.get(i), root);
+        }
+        answer = new int[2][nodeinfo.length];
+        preorder(answer, root);
+        index = 0;
+        postorder(answer, root);
 
         return answer;
     }
 
-    public static class Tree {
-        public Node root;
+    static int index = 0;
+    private static void preorder(int[][] answer, Node node) {
+        if(node == null) {
+            return;
+        }
+        else {
+            answer[0][index++] = node.value;
+            preorder(answer, node.leftnode);
+            preorder(answer, node.rightnode);
+        }
+    }
 
-        //node 추가
-        public void addNode(Node inputnode) {
-            if (root == null) {
-                root = inputnode;
+    private static void postorder(int[][] answer, Node node) {
+        if(node == null) {
+            return;
+        }
+        else {
+            postorder(answer, node.leftnode);
+            postorder(answer, node.rightnode);
+            answer[1][index++] = node.value;
+        }
+    }
+
+
+    public static void addNode(Node inputNode, Node root) {
+        if(inputNode.row < root.row) {
+            if(root.leftnode == null) {
+                root.leftnode = inputNode;
             }
             else {
-                addNode(inputnode, root);
+                addNode(inputNode, root.leftnode);
             }
         }
-
-        public void addNode(Node inputnode, Node root) {
-            if (inputnode.row <= root.row) {
-                if (root.leftnode == null) {
-                    Node node = new Node();
-                    node.value = inputnode.value;
-                    root.leftnode = node;
-                } else {
-                    addNode(inputnode, root.leftnode);
-                }
+        else {
+            if(root.rightnode == null) {
+                root.rightnode = inputNode;
             }
             else {
-                if (root.rightnode == null) {
-                    Node node = new Node();
-                    node.value = inputnode.value;
-                    root.rightnode = node;
-                }
-                else {
-                    addNode(inputnode, root.rightnode);
-                }
+                addNode(inputNode, root.rightnode);
             }
         }
-
-        public void preorder(Node root) {
-            if(root == null) {
-                return;
-            }
-            //여기서 result 식으로 삽입
-            System.out.printf(root.value + " ");
-            preorder(root.leftnode);
-            preorder(root.rightnode);
-        }
-
-        public void postorder(Node root) {
-            if(root == null) {
-                return;
-            }
-            postorder(root.leftnode);
-            postorder(root.rightnode);
-            //여기서 result 식으로 삽입
-            System.out.print(root.value + " ");
-        }
-
-
-
     }
 
     public static class Node {
@@ -133,11 +123,6 @@ public class FindPathGame_Prg_BTS {
         int col;
         Node leftnode;
         Node rightnode;
-
-        public Node() {
-//            leftnode = new Node();
-//            rightnode = new Node();
-        }
 
         public Node(int value, int x, int y) {
             this.value = value;
