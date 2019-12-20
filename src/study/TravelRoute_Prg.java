@@ -19,6 +19,7 @@ public class TravelRoute_Prg {
 //        }
 
         String tikets3[][] = {{"ICN","BOO"},{"ICN","COO"},{"COO","DOO"},{"DOO","COO"},{"BOO","DOO"},{"DOO","BOO"},{"BOO","ICN"},{"COO","BOO"}};
+        String[][] tickets = {{ "ICN", "AOO" },{ "AOO", "BOO" },{ "BOO", "ICN" },{"ICN","AOO"},{"ICN","AOO"}};
         String result3[] = solution(tikets3);
         for(String i :  result3) {
             System.out.printf(i + " ");
