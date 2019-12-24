@@ -20,18 +20,50 @@ public class CompressString_Prg {
 
 
     }
-    static List<String> list;
+
     public static int solution(String s) {
-        String Sarray[] = s.split("");
-        int answer = Sarray.length;
+        int answer = s.length();
 
-        int depth = 2;
+        for(int i=1;i<=s.length()/2;i++) {
+            int index = 0;
+            int length = s.length();
+            while(index+i <= s.length()) {
+                String partition = s.substring(index,index+i);
+                index = index + i;
 
-        for(int i=depth;i<Sarray.length;i++) {
+                int count = 0;
+                while(index + i <= s.length()) {
+                    if(partition.equals(s.substring(index, index+i))) {
+                        count++;
+                        index = index+i;
+                    }
+                    else {
+                        break;
+                    }
+                }
 
+                if(count > 0) {
+                    length = length - (i*count);
+                    //1자리 인경우
+                    if(count < 9) {
+                        length = length + 1;
+                    }
+                    else if(count < 99) {
+                        length = length + 2;
+                    }
+                    else if(count < 999) {
+                        length = length + 3;
+                    }
+                    else {
+                        length = length + 4;
+                    }
+                }
+            }
+            answer = Math.min(answer,length);
         }
 
-
         return answer;
+
     }
+
 }
