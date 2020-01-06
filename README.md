@@ -62,8 +62,12 @@
         BackTracking , DFS / TravelRoute_Prg
     - 정수삼각형
         DP / Triangle_Prg
-    - 주사위윷놀이/
-        / DiceYoutnori_Boj
+    - 주사위윷놀이
+        DFS, Simulation / DiceYoutnori_Boj
+    - 연구소
+        DFS. BFS / Virus_Boj
+    - 멀쩡한 사각형
+        규칙찾기, 최대공약수, 최소공배수/ LookniceSquare_Prg
     
      
     
