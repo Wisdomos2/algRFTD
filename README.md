@@ -68,6 +68,11 @@
         DFS. BFS / Virus_Boj
     - 멀쩡한 사각형
         규칙찾기, 최대공약수, 최소공배수/ LookniceSquare_Prg
+    - 게리멘더링
+        Simulation, DFS, BFS / GaryManthering2_Boj
+    - 승부 예측
+        
+      
     
      
     
