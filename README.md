@@ -27,6 +27,17 @@
     2. 공백 -> " 으로 바꿔줌.<br>
     3. , -> ", 으로 바꿔주고 맨마지막에 " 하나 더 붙여줌.<br>
     
+### Comparable, tor 사용한 문제들
+    - 베스트 앨범 / BestAllbum_Prg
+    - 길찾기 게임 / EnglishMatch_Prg_Implement
+    - 여행 경로 / TravelRoute_Prg
+
+### 문자열 검색 
+    - 트라이 알고리즘 / SeachingLyrics_Prg
+     
+### 최소공배수 공약수 
+    -  LookniceSqure_Prg
+    
 ### Study 알고리즘 분류 .
     - 베스트 앨범
         Hash, 이중Map / BestAllbum_Prg
@@ -74,7 +85,18 @@
     - 카카오 컬러링북
         BFS / KaKaoColoringBook_Prg
         소요 시간 : 17분
-    - 
+    - 숫자게임
+        Math / NumberGame_Prg
+        소요 시간 : 30분
+    - 게리멘더링2
+        BFS,DFS,Simulation / GrayMandering2_Prg
+        소요 시간 : 1시간 40분
+    - 쿠기구입
+        Implement / BuyCookie_Prg
+        소요 시간 : 30분
+    - 지형 편집
+        ??? / CustomizeMap_Prg
+        소요 시간 : 
       
     
      
