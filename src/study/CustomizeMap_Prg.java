@@ -1,11 +1,9 @@
 package study;
 
-import java.util.*;
-
 /*
     지형편집
-    ??? / CustomizeMap_Prg
-    소요 시간 :
+    Binary Search / CustomizeMap_Prg
+    소요 시간 : 45분 (뻘짓..)
     https://programmers.co.kr/learn/courses/30/lessons/12984
  */
 public class CustomizeMap_Prg {
@@ -24,6 +22,10 @@ public class CustomizeMap_Prg {
     }
 
     /*
+        1. Map으로 정렬한 뒤 가장 많은 레벨의 블록 수를 기준으로 맞춰봄. -> TestCase 성공, 부분 실패
+        2. 완탐 -> 시간초과
+        3. 이분탐색 -> 성공
+        뻘짓 지렷꾸
         역시나 완탐은 또 시간초과가 뜸.
         시간초과이기에 이분탐색으로 죠져봄.
      */
@@ -40,26 +42,33 @@ public class CustomizeMap_Prg {
             }
         }
 
-        long midBlock = 0;
-        while(minBlock<=maxBlock) {
+
+        long mid = 0;
+
+        while(minBlock <= maxBlock) {
+
+            mid = (minBlock+maxBlock)/2;
+
             if(minBlock == maxBlock) {
                 break;
             }
-            midBlock = (minBlock+maxBlock)/2;
-            long resultOfleft = calculation(land,P,Q,midBlock);
-            long resultOfright = calculation(land,P,Q,midBlock+1);
-            if(resultOfleft == resultOfright) {
+
+            long resultOfleft = calculation(land,P,Q,mid);
+            long resultOfright = calculation(land,P,Q,mid+1);
+
+            if(resultOfleft < resultOfright) {
+                maxBlock = mid;
+            }
+            else if(resultOfleft > resultOfright){
+                minBlock = mid + 1;
+            }
+            else {
                 break;
             }
-            else if(resultOfleft < resultOfright) {
-                maxBlock = midBlock;
-            }
-            else  {
-                minBlock = midBlock + 1;
-            }
         }
+        answer = calculation(land,P,Q,mid);
 
-        return calculation(land,P,Q,midBlock);
+        return answer;
     }
 
     private static long calculation(int land[][], int P, int Q, long value) {

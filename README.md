@@ -94,9 +94,9 @@
     - 쿠기구입
         Implement / BuyCookie_Prg
         소요 시간 : 30분
-    - 지형 편집
-        ??? / CustomizeMap_Prg
-        소요 시간 : 
+    - 지형편집
+        Binary Search / CustomizeMap_Prg
+        소요 시간 : 45분 (뻘짓..)
       
     
      
