@@ -97,6 +97,12 @@
     - 지형편집
         Binary Search / CustomizeMap_Prg
         소요 시간 : 45분 (뻘짓..)
+    - 스티커모으기
+        DP / CollectSticker_Prg
+        소요 시간 : 40분 ( 재귀로 또 뻘짓태움.)
+    - 새로운게임2
+        ??? / NewGame2_Boj
+        소요 시간 : 
       
     
      
