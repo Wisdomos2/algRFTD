@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
         소요 시간 :
  */
 public class NewGame2 {
+    //TODO have to solve this problem!
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String getinfo[] = bf.readLine().split(" ");
