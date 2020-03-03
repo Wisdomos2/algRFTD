@@ -112,8 +112,8 @@
         구현 / Friends4Block_Prg
         소요 시간 : 30분
     - 점프와 순간이동
-            / JumpAndTeleport_Prg
-        소요 시간 : 
+        수학 / JumpAndTeleport_Prg
+        소요 시간 : 10분  
     - 아기상어
             / BabyShak_Boj
         소요 시간 : 
