@@ -106,10 +106,22 @@
     - 매칭점수
         구현 / MatchingScore_Prg
         소요 시간 : 65분 ( 18)
-    - 미세먼지안녕
-        구현, Shift / DustByeBye_Boj
-        소요 시간 : 60
-        "동시 확산"은 배열을 하나 더만들어 한번에 더 해주어야함.
+    - 미세먼지안녕!
+    - 0220~
+    - 프렌즈4블록
+        구현 / Friends4Block_Prg
+        소요 시간 : 30분
+    - 점프와 순간이동
+        수학 / JumpAndTeleport_Prg
+        소요 시간 : 10분  
+    - 아기상어
+            / BabyShak_Boj
+        소요 시간 : 
+    - 치킨 배달
+            / ChickenDeliver_Boj
+        소요 시간 : 
+    
+        
       
     
      
