@@ -124,8 +124,9 @@
         조합,구현 / ChickenDeliver_Boj
         소요 시간 : 30분 
     - 책 페이지
-            / BookPage_Boj
-        소요 시간 : 
+        정수론, 수학 / BookPage_Boj
+        소요 시간 : 1시간 30분 (도움받아서.)
+        자리수에 대해 0~9가 몇번나오는지 알수 있었던 문제임.
     - 추석 트래픽
         / CsTraffic_Prg
         소요 시간 : 
