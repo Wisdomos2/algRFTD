@@ -100,7 +100,7 @@
     - 스티커모으기
         DP / CollectSticker_Prg
         소요 시간 : 40분 ( 재귀로 또 뻘짓태움.)
-    - 새로운게임2
+    - @@새로운게임2
         ??? / NewGame2_Boj
         소요 시간 : 
     - 매칭점수
@@ -117,7 +117,7 @@
     - 점프와 순간이동
         수학 / JumpAndTeleport_Prg
         소요 시간 : 10분  
-    - 아기상어
+    - @@아기상어 
             / BabyShak_Boj
         소요 시간 : 
     - 치킨 배달
@@ -130,6 +130,12 @@
     - 추석 트래픽
         구현, 문자열파싱, DateFormat / CsTraffic_Prg
         소요 시간 : 1시간 ?
+    - 뉴스 클러스터링
+        문자열, 구현 / NewsClerstering_Prg
+        소요 시간 : 30분
+    - 큐빙
+        / Cuving_Boj
+        소요 시간 : 
     
         
       
