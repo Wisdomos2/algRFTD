@@ -23,7 +23,7 @@ public class CsTraffic_Prg {
                 "2016-09-15 21:00:00.748 2.31s",
                 "2016-09-15 21:00:00.966 0.381s",
                 "2016-09-15 21:00:02.066 2.62s"};
-        System.out.println(solution(input1));
+        System.out.println(solution(input3));
 
     }
 

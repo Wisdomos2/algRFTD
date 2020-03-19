@@ -134,8 +134,12 @@
         문자열, 구현 / NewsClerstering_Prg
         소요 시간 : 30분
     - 큐빙
-        / Cuving_Boj
-        소요 시간 : 
+        시뮬레이션 / Cuving_Boj
+        소요 시간 : 1시간 40분
+    - 0320~
+    - 
+        
+     
     
         
       
