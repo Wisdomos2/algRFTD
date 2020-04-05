@@ -7,7 +7,8 @@ import java.util.Map;
 public class Cache_Prg {
     public static void main(String[] args) {
         int cacheSize1 = 3;
-        String cities[] = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"};
+        String cities[] = {"Jeju", "Jeju", "Seoul", "Seoul", "Seoul", "Seoul",
+                "Pangyo", "Pangyo", "Jeju","POPO","seoul"};
         String cities2[] = {"Jeju","Pangyo","Seoul","Jeju","Pangyo","Seoul","Jeju","Pangyo","Seoul"};
         System.out.println(solution(cacheSize1, cities));
 
@@ -41,9 +42,26 @@ public class Cache_Prg {
             }
 
             if(memoryCnt < cacheSize) {
-                memoryDB[memoryCnt] = inputCity;
-                memoryCnt++;
-                cacheResult += 5;
+                int index = checkSame(memoryDB,inputCity);
+                //있다.
+                if(index >= 0) {
+                    //그게 처음이다.
+                    if(memoryCnt == 0) {
+                        memoryCnt++;
+                        cacheResult += 1;
+                        continue;
+                    }
+                    else {
+                        //아니다 2개 이상있ㄷ.ㅏ
+
+                    }
+                }
+                else
+                {
+                    memoryDB[memoryCnt] = inputCity;
+                    memoryCnt++;
+                    cacheResult += 5;
+                }
             }
             else {
                 //같은게 있음 해당 인덱스 까지 왼쪽으로 밀고 오른쪽으로  -> c.
