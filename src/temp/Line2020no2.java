@@ -7,6 +7,7 @@ public class Line2020no2 {
         System.out.println(solution(new String("if (Count of eggs is 4.) {Buy milk.}")));
     }
     public static int solution(String inputString) {
+
         int total = 0;
         Stack<String> a = new Stack<>();
 
@@ -59,7 +60,6 @@ public class Line2020no2 {
                 total++;
             }
         }
-
 
 
         return total;
