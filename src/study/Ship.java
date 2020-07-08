@@ -15,7 +15,6 @@ public class Ship {
             for(int j=i;j<j+10;j++) {
                 list.add(j);
             }
-            this.containers.put(i, fillContainer.apply(list));
         }
     }
 
